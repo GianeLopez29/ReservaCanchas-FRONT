@@ -69,3 +69,8 @@ Crear archivo `.env.local`:
 ```
 REACT_APP_API_URL=http://localhost:5000
 ```
+### Autoría
+   - `ESTUDIANTE`: *Gianella Lopez*
+   - `INSTITUCION`: *UTN - Universidad Tecnológica Nacional*
+   - `TITULO`: *Diplomatura en Desarrollo Web Full Stack*
+   - *Proyecto Final Integrador*
