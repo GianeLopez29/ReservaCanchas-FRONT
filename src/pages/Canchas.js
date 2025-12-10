@@ -11,7 +11,7 @@ const Canchas = () => {
   useEffect(() => {
     const fetchCanchas = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/canchas');
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/canchas`);
         setCanchas(response.data);
       } catch (err) {
         setError('Error al cargar las canchas');

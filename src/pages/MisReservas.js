@@ -16,7 +16,7 @@ const MisReservas = ({ token }) => {
 
     const fetchReservas = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/reservas/mis-reservas', {
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/reservas/mis-reservas`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         setReservas(response.data);
@@ -34,7 +34,7 @@ const MisReservas = ({ token }) => {
     if (!window.confirm('¿Estás seguro de cancelar esta reserva?')) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/reservas/${id}`, {
+      await axios.delete(`${process.env.REACT_APP_API_URL}/api/reservas/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setReservas(reservas.filter(r => r._id !== id));

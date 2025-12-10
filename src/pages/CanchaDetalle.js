@@ -25,7 +25,7 @@ const CanchaDetalle = ({ token, user }) => {
   useEffect(() => {
     const fetchCancha = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/canchas/${id}`);
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/canchas/${id}`);
         setCancha(response.data);
       } catch (err) {
         setError('Error al cargar la cancha');
@@ -89,7 +89,7 @@ const CanchaDetalle = ({ token, user }) => {
 
     try {
       await axios.post(
-        'http://localhost:5000/api/reservas',
+        `${process.env.REACT_APP_API_URL}/api/reservas`,
         { canchaId: id, ...formData },
         { headers: { Authorization: `Bearer ${token}` } }
       );
