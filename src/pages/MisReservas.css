@@ -1,0 +1,139 @@
+.mis-reservas {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  min-height: calc(100vh - 80px);
+}
+
+.mis-reservas h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.no-reservas {
+  background: #FFFFFF;
+  padding: 3rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.no-reservas p {
+  color: #1A1A1A;
+  opacity: 0.7;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.reservas-list {
+  display: grid;
+  gap: 2rem;
+}
+
+.reserva-card {
+  background: #F7F9F9;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.06);
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  transition: all 0.3s ease;
+}
+
+.reserva-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12), 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.reserva-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reserva-info {
+  padding: 2rem;
+}
+
+.reserva-info h3 {
+  color: #1A1A1A;
+  margin-bottom: 1rem;
+}
+
+.reserva-info p {
+  color: #1A1A1A;
+  opacity: 0.7;
+  margin-bottom: 0.5rem;
+}
+
+.servicios-contratados {
+  background: #f0f8ff;
+  padding: 0.8rem;
+  border-radius: 8px;
+  margin: 0.8rem 0;
+}
+
+.servicios-contratados strong {
+  display: block;
+  color: #1A1A1A;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.servicios-contratados span {
+  display: inline-block;
+  background: #FFFFFF;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  margin: 0.2rem;
+  font-size: 0.85rem;
+  color: #1A1A1A;
+  opacity: 0.8;
+}
+
+.precio-reserva {
+  background: #e8f5e9;
+  padding: 0.8rem;
+  border-radius: 8px;
+  margin: 0.8rem 0;
+}
+
+.precio-reserva strong {
+  color: #0FA958;
+  font-size: 1.1rem;
+}
+
+.estado {
+  color: #0FA958;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.btn-cancelar {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 1rem;
+  transition: background 0.3s;
+}
+
+.btn-cancelar:hover {
+  background: #c0392b;
+}
+
+@media (max-width: 768px) {
+  .reserva-card {
+    grid-template-columns: 1fr;
+  }
+
+  .reserva-card img {
+    height: 200px;
+  }
+}
